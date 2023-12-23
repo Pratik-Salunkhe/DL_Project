@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Blind Corner Collision Prevention</title>
+</head>
+<body>
+    <header>
+        <h1>Blind Corner Collision Prevention</h1>
+    </header>
+
+    <section class="main-section">
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fas fa-cloud-upload-alt"></i> Choose Image
+            </label>
+            <input id="file-upload" type="file" name="file" accept=".jpg, .jpeg, .png" required>
+            <button type="submit">Upload & Predict</button>
+        </form>
+
+        {% if image_path %}
+            <div class="prediction-section">
+                <p class="predicted-class">Predicted Class: {{ predicted_class }}</p>
+                <!--<p class="Models_Prediction">Models_Prediction: {{models}}</p>
+                <p class="most_frequent_class">most_frequent_class: {{most_frequent_class}}</p>-->
+            </div>
+            <div class="image-section">
+                <img src="{{ image_path }}" alt="Uploaded Image">
+            </div>
+        {% endif %}
+    </section>
+</body>
+</html>

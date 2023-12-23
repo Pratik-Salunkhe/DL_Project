@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+header {
+    background-color: #3498db;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    max-height: 80vh; /* Set a maximum height for the viewport */
+    overflow-y: auto; /* Add vertical scroll if necessary */
+}
+
+form {
+    display: flex;
+    align-items: center; /* Align items horizontally */
+    margin-bottom: 20px;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 15px 30px;
+    cursor: pointer;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    margin-right: 10px; /* Add some spacing between the button and the file input */
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #27ae60;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button {
+    padding: 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+.prediction-section {
+    margin-top: 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.image-section {
+    margin-top: 20px;
+    border: 2px solid #3498db;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-section img {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
